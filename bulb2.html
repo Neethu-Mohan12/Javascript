@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="bulb">
+        <img src="https://media.istockphoto.com/id/171371931/photo/a-close-up-of-a-light-bulb-on-a-white-background.jpg?s=612x612&w=0&k=20&c=ofyYyNCEQSuNcyFbmksjWj-dTgk-SpsemkyuN4bX5zg=" alt="" height="250px" width="200px" id="bulb" style="position: relative;left: 100px;">
+        <button onclick="on()"  style="position: relative;bottom: 100px;left: 150px;">ON</button>
+         <button onclick="off()"  style="position: relative;bottom: 100px;left: 150px;">OFF</button>
+         <script>
+            function on(){
+             var bulb=document.getElementById("bulb")
+             bulb.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZk4wBmh3sg6wkSoMtWXEP4-yM42HVgdaulg&usqp=CAU";
+            }
+            function off(){
+                bulb.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8rmsVRL-7Q5wqe9oneZy7lRvBDtxu3YJNPw&usqp=CAU"
+            }
+         </script>
+    </div>
+</body>
+</html>
+
