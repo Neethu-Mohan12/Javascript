@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <h1 style="color: rgb(77, 121, 255);" id="hai">Javascript onkeyup</h1>
+        <div>
+        <h3> Using syntax1</h3>
+        Enter text here: <input type="text" id = "syntax1">
+        </div>
+        <script>
+        document.getElementById("syntax1").onkeyup = function()
+        {
+        syntax1();
+        };
+        function syntax1()
+        {
+        document.getElementById("hai").style.color="green";
+        }
+        </script>
+        
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1ecec;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #97a1b4;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 3px 3px 3px 3px rgb(203,185, );
+        }
+
+        form {
+            text-align: center;
+        }
+
+        input {
+            width: 60px;
+            height: 50px;
+            font-size: 24px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        input[type="text"] {
+            width: 300px;
+            font-size: 22px;
+            font-weight: 600;
+            padding: 5px;
+            margin-bottom: 10px;
+           
+        }
+
+        input[type="button"].demo {
+            background-color: #2b2c2c;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            box-shadow: 2px 2px 2px 2px white; 
+        }
+
+        input[type="button"].demo.dd {
+            background-color: #f44336;
+        }
+    </style>
+</head>
+<body>
+   <div class="container">
+    <form name="form1">
+        <input id="calc" type="text" name="answer"><br><br>
+        <input type="button" value="1" class="demo" onclick="form1.answer.value +='1'">
+        <input type="button" value="2" class="demo" onclick="form1.answer.value +='2'">
+        <input type="button" value="3" class="demo" onclick="form1.answer.value +='3'">
+        <input type="button" value="+" class="demo" onclick="form1.answer.value +='+'">
+        <br><br>
+        <input type="button" value="4" class="demo" onclick="form1.answer.value +='4'">
+        <input type="button" value="5" class="demo" onclick="form1.answer.value +='5'">
+        <input type="button" value="6" class="demo" onclick="form1.answer.value +='6'">
+        <input type="button" value="-" class="demo" onclick="form1.answer.value +='-'">
+        <br><br>
+        <input type="button" value="7" class="demo" onclick="form1.answer.value +='7'">
+        <input type="button" value="8" class="demo" onclick="form1.answer.value +='8'">
+        <input type="button" value="9" class="demo" onclick="form1.answer.value +='9'">
+    <input type="button" value="*" class="demo" onclick="form1.answer.value +='*'">
+    <br><br>
+    <input type="button" value="/" class="demo" onclick="form1.answer.value +='/'">
+    <input type="button" value="0" class="demo" onclick="form1.answer.value +='0'">
+    <input type="button" value="." class="demo" onclick="form1.answer.value +='.'">
+    <input type="button" class="demo" value="=" onclick="form1.answer.value=eval(form1.answer.value)">
+    <br><br>
+    <input type="button" class="demo dd" value="C" onclick="form1.answer.value= ' ' " id="clear" >
+</form>
+</div> 
+</body>
+</html>

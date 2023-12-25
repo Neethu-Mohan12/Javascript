@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Onchange Example</title>
+    <style>
+        div{
+            padding-top: 400px;
+            margin: auto;
+            width: 600px;
+            height: 600px;
+            font-size: 28px;
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <label for="exampleInput">Type Something:</label>
+        <input type="text" id="exampleInput" onchange="myFunction()" style="width: 70%; height: 38px; font-size: 28px;">
+    </div>
+
+    <script>
+        function myFunction() {
+            var inputValue = document.getElementById("exampleInput").value;
+            alert('Input value changed to: ' + inputValue);
+        }
+    </script>
+</body>
+</html>
+
