@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section>
+    <button onclick="myFunction()">create</button>
+    <button onclick="remove()">Remove</button>
+</section>
+    <script>
+        function myFunction()
+        {
+let newpara=document.createElement("p");
+newpara.textContent="welcome to the world of javascript";
+let sec=document.querySelector("section");
+sec.appendChild(newpara);
+        }
+        function remove()
+        {
+            let sec=document.querySelector("section");
+            let newpara=sec.querySelector("p"); 
+            sec.removeChild(newpara);
+        }
+    </script>
+</body>
+</html>

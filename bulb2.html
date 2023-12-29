@@ -12,10 +12,14 @@
          <button onclick="off()"  style="position: relative;bottom: 100px;left: 150px;">OFF</button>
          <script>
             function on(){
-             var bulb=document.getElementById("bulb")
+             var bulb=document.getElementById("bulb");
+             bulb.style.height="150px";
+             bulb.style.width="150px";
              bulb.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZk4wBmh3sg6wkSoMtWXEP4-yM42HVgdaulg&usqp=CAU";
             }
             function off(){
+                bulb.style.height="150px";
+             bulb.style.width="150px";
                 bulb.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8rmsVRL-7Q5wqe9oneZy7lRvBDtxu3YJNPw&usqp=CAU"
             }
          </script>

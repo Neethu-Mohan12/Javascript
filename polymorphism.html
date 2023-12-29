@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class firstClass {
+    add() {
+        console.log("First Method")
+    }
+}
+class secondClass extends firstClass {
+    add() {
+        console.log(30 + 40);
+    }
+}
+class thirdClass extends secondClass {
+    add() {
+        console.log("Last Method")
+    }
+}
+let ob = new firstClass();
+let ob2 = new secondClass();
+let ob3 = new thirdClass();
+ob.add();
+ob2.add();
+ob3.add();
+    </script>
+</body>
+</html>

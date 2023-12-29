@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: auto;
+            padding-top: 200px;
+            margin-left: 500px;
+
+        }
+    </style>
+</head>
+<body>
+    <input type="email" id="email1">
+    <button type="submit" onclick="valid()">submit</button>
+    <script>
+        function valid(){
+            const email=document.getElementById("email1").value;
+            const regex=/^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/;
+            if(regex.test(email))
+            {
+                console.log(`${email} is valid`);
+            }
+            else{
+                console.log(`${email} is not valid`);
+            }
+        }
+    </script>
+</body>
+</html>

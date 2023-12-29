@@ -1,0 +1,32 @@
+<!-- In javascript ,a constuctor gets called when an object is created using the new keyword. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        class Student{
+            constructor(name,age,email)
+            {
+               this.name=name;
+               this.age=age;
+               this.email=email;
+
+            }
+            display()
+            {
+                console.log(this.name);
+                console.log(this.age);
+                console.log(this.email);
+            }
+        }
+        let c=new Student("anu",20,"anu@gmail.com");
+        c.display();
+    </script>
+</body>
+</html>

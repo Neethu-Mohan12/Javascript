@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Input Fields</title>
+    <style>
+        .input-field {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+      <p style="font-size: 28px;font-weight: bold;">Dynamic Input Fields</p>
+        <button onclick="addInputField()">+</button>
+        <!-- <button onclick="removeInputField()">-</button> -->
+    </section>
+    <div id="inputFieldsContainer"></div>
+
+    <script>
+        let inputFieldCount = 0;
+
+        function addInputField() {
+            inputFieldCount++;
+
+            let newInputField = document.createElement("input");
+            newInputField.type = "text";
+            newInputField.name = "AddressLine" + inputFieldCount;
+            newInputField.placeholder = "Address Line " + inputFieldCount;
+
+            let minusButton = document.createElement("button");
+            minusButton.textContent = "-";
+            minusButton.onclick = function() {
+                removeInputField(newInputField, minusButton);
+            };
+
+            let containerDiv = document.createElement("div");
+            containerDiv.className = "input-field";
+            containerDiv.appendChild(newInputField);
+            containerDiv.appendChild(minusButton);
+
+            let mainContainer = document.getElementById("inputFieldsContainer");
+            mainContainer.appendChild(containerDiv);
+        }
+
+        function removeInputField(inputField, minusButton) {
+            let container = document.getElementById("inputFieldsContainer");
+            container.removeChild(inputField.parentElement); 
+
+            inputFieldCount--;
+        }
+    </script>
+</body>
+</html>
